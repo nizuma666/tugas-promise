@@ -8,7 +8,7 @@ const getPost = (method, url) => {
         const hasil = JSON.parse(ajax.responseText);
         resolve(hasil);
       } else {
-        const err = "ada error bro...";
+        const err = "error ya ges ya";
         reject(err);
       }
     };

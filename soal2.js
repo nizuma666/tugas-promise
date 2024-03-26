@@ -14,7 +14,7 @@ const getMonth = (callback) => {
       "November",
       "Desember",
     ];
-    if (!error) {
+    if (error) {
       callback(null, month);
     } else {
       callback(new Error("Sorry Data Not Found"), []);
@@ -24,7 +24,7 @@ const getMonth = (callback) => {
 
 const getCallback = (error, month) => {
   if (!error) {
-    month.map((x) => console.log(x));
+    month.map((item) => console.log(item));
   } else {
     return console.log(error.message, []);
   }
